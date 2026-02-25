@@ -6,4 +6,5 @@ version: 0.1.0
 dependencies:
   - name: job-chart
     version: "0.1.0"
-    repository: "file://../job-chart"   # local reference to job-chart
+    #repository: "file://../job-chart"   # local reference to job-chart
+    repository: "http://nexus-nexus-repository-manager.default.svc.cluster.local:8081/repository/helm-hosted/"   # ← nexus reference to job-chart
