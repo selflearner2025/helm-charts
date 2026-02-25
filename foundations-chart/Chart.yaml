@@ -1,0 +1,9 @@
+apiVersion: v2
+name: foundations-chart
+description: Foundations domain chart
+type: application
+version: 0.1.0
+dependencies:
+  - name: job-chart
+    version: "0.1.0"
+    repository: "file://../job-chart"   # local reference to job-chart

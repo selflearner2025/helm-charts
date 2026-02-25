@@ -1,0 +1,14 @@
+# default values — do not deploy with these directly
+configMapName: "foundations-management-app-cm"
+artifactName: ""
+artifactSha256: ""
+artifactUrl: ""
+
+# values passed through to job-chart dependency
+job-chart:
+  jobName: "foundations-bpmn-sync-job"
+  configMapName: "foundations-management-app-cm"
+  image: "alpine:3.20"
+  ttlSecondsAfterFinished: 400
+  activeDeadlineSeconds: 600
+  backoffLimit: 1

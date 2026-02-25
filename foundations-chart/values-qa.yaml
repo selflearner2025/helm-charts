@@ -1,0 +1,14 @@
+env: qa                                         # ← add this
+configMapName: "foundations-management-app-cm"
+artifactName: "bpmn-poc.tar.gz"
+artifactSha256: "qa-sha256-placeholder"
+artifactUrl: "https://nexus/foundations/qa/v1.0.0.bpmn"
+
+job-chart:
+  jobName: "foundations-bpmn-sync-job-qa"            # ← add env suffix
+  configMapName: "foundations-management-app-cm-qa"  # ← must match configmap name above
+  image: "alpine:3.20"
+  ttlSecondsAfterFinished: 400
+  activeDeadlineSeconds: 600
+  backoffLimit: 1
+
