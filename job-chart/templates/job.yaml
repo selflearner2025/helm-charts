@@ -19,6 +19,9 @@ spec:
         - name: artifact-info
           configMap:
             name: {{ .Values.configMapName }}
+        - name: env-secret                    # ← add this
+          secret:
+            secretName: {{ .Values.secretName }}
       containers:
         - name: downloader
           image: {{ .Values.image }}
@@ -50,3 +53,6 @@ spec:
               mountPath: /bpmn
             - name: artifact-info
               mountPath: /artifact
+            - name: env-secret                    # ← add this
+              mountPath: /secret
+              readOnly: true
