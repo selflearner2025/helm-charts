@@ -1,7 +1,7 @@
 env: qa                                         # ← add this
 configMapName: "foundations-management-app-cm"
 artifactName: "bpmn-poc.tar.gz"
-artifactSha256: "qa-sha256-placeholder"
+artifactSha256: "changing qa before sandeep"
 artifactUrl: "https://nexus/foundations/qa/v1.0.0.bpmn"
 
 job-chart:
