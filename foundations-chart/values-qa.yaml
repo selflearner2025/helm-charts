@@ -11,4 +11,5 @@ job-chart:
   ttlSecondsAfterFinished: 400
   activeDeadlineSeconds: 600
   backoffLimit: 1
+  secretName: "qa-secret" 
 
