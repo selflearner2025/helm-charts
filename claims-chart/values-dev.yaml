@@ -1,11 +1,12 @@
+env: dev                                        # ← add this
 configMapName: "claims-management-app-cm"
 artifactName: "bpmn-poc.tar.gz"
 artifactSha256: "dev-sha256-placeholder"
 artifactUrl: "https://nexus/claims/dev/v1.0.0.bpmn"
 
 job-chart:
-  jobName: "claims-bpmn-sync-job"
-  configMapName: "claims-management-app-cm"
+  jobName: "claims-bpmn-sync-job-dev"           # ← add env suffix
+  configMapName: "claims-management-app-cm-dev" # ← must match configmap name above
   image: "alpine:3.20"
   ttlSecondsAfterFinished: 400
   activeDeadlineSeconds: 600
