@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: claims-appset
+  name: foundations-appset
   namespace: argocd
 spec:
   generators:
@@ -13,24 +13,24 @@ spec:
         #  - env: prod
   template:
     metadata:
-      name: 'claims-{{env}}'
+      name: 'foundations-{{env}}'
       labels:
         env: '{{env}}'
-        domain: claims
+        domain: foundations
     spec:
       project: default
       source:
         repoURL: https://github.com/selflearner2025/helm-charts.git
         targetRevision: main
-        path: claims-chart
+        path: foundations-chart
         helm:
           valueFiles:
             - values-{{env}}.yaml    # picks up values-dev.yaml or values-qa.yaml
           values: |
                env: {{env}}              # ← injected automatically by ApplicationSet
                job-chart:
-                  jobName: claims-bpmn-sync-job-{{env}}
-                  configMapName: claims-management-app-cm-{{env}}
+                  jobName: foundations-bpmn-sync-job-{{env}}
+                  configMapName: foundations-management-app-cm-{{env}}
       destination:
         server: https://kubernetes.default.svc
         namespace: shared-namespace
