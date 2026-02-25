@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configMapName }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"   # configmap before job
+data:
+  artifactName: {{ .Values.artifactName | quote }}
+  artifactSha256: {{ .Values.artifactSha256 | quote }}
+  artifactUrl: {{ .Values.artifactUrl | quote }}

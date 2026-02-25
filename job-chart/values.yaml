@@ -1,0 +1,7 @@
+jobName: "bpmn-sync-job"
+image: "alpine:3.20"
+configMapName: ""
+secretName: ""
+ttlSecondsAfterFinished: 400
+activeDeadlineSeconds: 600
+backoffLimit: 1
