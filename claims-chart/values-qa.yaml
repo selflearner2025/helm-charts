@@ -1,7 +1,7 @@
 env: qa                                         # ← add this
 configMapName: "claims-management-app-cm"
 artifactName: "bpmn-poc.tar.gz"
-artifactSha256: "qa-sha256-placeholder"
+testmessage: "qa-sha256-placeholder"
 artifactUrl: "https://nexus/claims/qa/v1.0.0.bpmn"
 
 job-chart:
