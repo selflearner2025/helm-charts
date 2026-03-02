@@ -1,7 +1,7 @@
 env: dev                                       
 configMapName: "claims-management-app-cm"
 artifactName: "changing cmais in dev"
-artifactSha256: "dev-sha256-placeholder"
+testmessage: "dev-sha256-placeholder"
 artifactUrl: "https://nexus/claims/dev/v1.0.0.bpmn"
 
 job-chart:
