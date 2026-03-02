@@ -1,7 +1,7 @@
 env: dev                                        # ← add this
 configMapName: "claims-management-app-cm"
 artifactName: "bpmn-poc.tar.gz"
-artifactSha256: "added dev secret"
+testmessage: "added dev secret"
 artifactUrl: "https://nexus/claims/dev/v1.0.0.bpmn"
 
 job-chart:
